@@ -1,0 +1,22 @@
+label{
+    color:rgb(4, 8, 71);
+}
+div{
+    background-image: url(bgimage.png); 
+    
+    height:100vh;
+}
+button{
+    color:white;
+    background-color: blueviolet;
+
+}
+h1{
+    text-align: center;
+    color:white;
+    background-color: rgb(3, 74, 50);
+}
+button:active{
+    color:beige;
+    background-color: green;
+}

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Predicted yield</title>
+        <style>
+            #abc{
+                background-color: beige;
+                text-align: center;
+                color:violet;
+            }
+            h1{
+                text-align: center;
+                color:white;
+            }
+        </style>
+    </head>
+    <body bgcolor="peach">
+    <div>
+    <form action="/predict_yield" method="post">
+        <h1>The yield is predicted from the crop that is recommended and other input factors</h1>
+
+        {% if hg_ha_yield %}
+            <h2 id="abc">Predicted hg/ha_yield: {{ hg_ha_yield }}</h2>
+        {% endif %}
+    </form>
+    </div>
+    </body>
+</html>

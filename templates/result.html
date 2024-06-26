@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>div{
+        background-image: url("https://costarmanager.com/hubfs/How%20Lease%20Accounting%20Company-Specific%20Fields%20are%20Easier%20with%20CoStar-1.jpg#keepProtocol"); 
+        
+        height:100vh;
+        background-size: cover;
+    }
+    button{
+        color:white;
+        background-color: blueviolet;
+    
+    }
+    h1{
+        text-align: center;
+        color:white;
+        background-color: rgb(6, 147, 100);
+    }
+    h3{
+        text-align: center;
+        color:rgb(18, 18, 18);
+        background-color: rgb(183, 240, 238);
+    }
+    button:active{
+        color:beige;
+        background-color: green;
+    }
+    div{
+        background-image: url("https://costarmanager.com/hubfs/How%20Lease%20Accounting%20Company-Specific%20Fields%20are%20Easier%20with%20CoStar-1.jpg#keepProtocol");
+        height:100vh;
+        background-size: cover;
+    }
+    </style>
+    <title>Crop Prediction Result</title>
+</head>
+<body>
+    <div>
+    <center>
+    <h1>Yield Prediction</h1>
+    
+    {% if predicted_crop %}
+        <h3>Predicted Crop: {{ predicted_crop }}</h3>
+        <form action="/predict_yield" method="post">
+
+        <table>
+            <tr><td>
+            <label for="area">Enter area:</label></td>
+            <td>
+            <input type="text" name="area" required><br></td></tr>
+            <tr><td>
+            <label for="year">Enter year:</label></td>
+            <td>
+            <input type="text" name="year" required><br></td></tr>
+            <tr><td>
+            <label for="avg_rainfall">Enter average rainfall (mm per year):</label></td>
+            <td>
+            <input type="text" name="avg_rainfall" required><br></td>
+            </tr>
+
+            <tr><td>
+            <label for="pesticides">Enter pesticides (tonnes):</label></td>
+            <td>
+            <input type="text" name="pesticides" required><br></td></tr>
+
+            <tr><td>
+            <label for="avg_temperature">Enter average temperature:</label></td>
+            <td>
+            <input type="text" name="avg_temperature" required><br></td>
+            </tr>
+            <tr><td>
+            <label >Enter crop:</label></td><td>
+            <input type="text" name = "pre" value = {{predicted_crop}} ><br></td>
+            </tr>
+
+        </table>
+
+            <button type="submit">Predict Yield</button>
+        </form>
+        </center>
+       
+    {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Python Script</title>
+</head>
+<body>
+    <h1>Click the button to run the Python script</h1>
+    <button id="run-button">Run Python Script</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('run-button').addEventListener('click', function() {
+            fetch('/run_python_script', { method: 'POST' })
+                .then(response => response.text())
+                .then(output => {
+                    document.getElementById('output').innerHTML = '<pre>' + output + '</pre>';
+                });
+        });
+    </script>
+</body>
+</html>
